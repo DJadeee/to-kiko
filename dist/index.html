@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>To Kiko</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <html lang="zh-TW">
+<head>
+  <!-- ==========================================
+       【設定區】網頁基本資訊與外部工具載入
+       ========================================== -->
+  <title>給泡泡的生日禮物~~~</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- 載入 Bootstrap 樣式 (幫你排版) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  
+  <!-- 載入 jQuery 與動態效果腳本 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<!-- ==========================================
+     【導覽列】網頁最上方的黑色選單 (Navbar)
+     ========================================== -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+  <!-- 左側標題 -->
+  <a class="navbar-brand" href="#">Jade & Kiko</a>
+  
+  <!-- 手機版縮小後的漢堡選單按鈕 -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <!-- 右側跳轉連結 (href 對應下方的 section id) -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="#s1">Our Story</a></li>
+      <li class="nav-item "><a class="nav-link" href="#s2">底片回憶</a></li>
+      <li class="nav-item"><a class="nav-link" href="#s3">未來計畫</a></li> 
+      <li class="nav-item"><a class="nav-link" href="#s4">留言板</a></li>
+    </ul>
+  </div>  
+</nav>
+
+<!-- ==========================================
+     【首頁大圖】自動輪播區域 (Carousel)
+     ========================================== -->
+<div class="ncyu">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <!-- 圖片下方的小點點指示器 -->
+    <ul class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+    </ul>
+    
+    <!-- 輪播圖片群組 -->
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <!-- ★ 這裡放圖片 1 (輪播圖) ★ -->
+        <img src="https://github.com/DJadeee/to-kiko/blob/main/Us-%E5%92%96%E5%95%A1%E5%BB%B3.JPG?raw=true" alt="NCYU" style="margin:auto; display:block;" >
+      </div>
+      <div class="carousel-item active">
+        <!-- ★ 這裡放圖片 2 (輪播圖) ★ -->
+        <img src="https://github.com/DJadeee/to-kiko/blob/main/Us-On%20train%20(2).jpg?raw=true" alt="NCYU" style="margin:auto; display:block;">
+      </div>
+      <div class="carousel-item">
+        <!-- ★ 這裡放圖片 3 (輪播圖) ★ -->
+        <img src="https://github.com/DJadeee/to-kiko/blob/main/Us-yuma%20town.jpg?raw=true" alt="NCYU" style="margin:auto; display:block;">
+      </div>
+      <div class="carousel-item">
+        <!-- ★ 這裡放圖片 4 (輪播圖) ★ -->
+        <img src="https://github.com/DJadeee/to-kiko/blob/main/Us-eat%20sushi.jpg?raw=true" alt="NCYU" style="margin:auto; display:block;">
+      </div>
+      <div class="carousel-item">
+        <!-- ★ 這裡放圖片 5 (輪播圖) ★ -->
+        <img src="https://github.com/DJadeee/to-kiko/blob/main/us-OKAYAMA.jpg?raw=true" alt="NCYU" style="margin:auto; display:block;">
+      </div>
+      <div class="carousel-item">
+        <!-- ★ 這裡放圖片 6 (輪播圖) ★ -->
+        <img src="https://github.com/DJadeee/to-kiko/blob/main/Us-KIko%20%E7%B3%BB%E7%95%A2%E5%85%B8.jpg?raw=true" alt="NCYU" style="margin:auto; display:block;">
+      </div>
+    </div>
+    
+    <!-- 左右切換的箭頭按鈕 -->
+    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+</div>
+  
+<!-- ==========================================
+     【區塊 S1】Our Story (故事與計時器)
+     ========================================== -->
+<section id="s1">
+  <div class="container-fluid">
+  <div class="row">
+    <!-- 標題與交往天數 -->
+    <div class="col-sm-12">
+      <h1> Our Story</h1>
+      <hr/>
+      <h3 style="color: #ff8fa3; margin-bottom: 30px;">
+         我們已經一起冒險了 <span id="days-counter" style="font-size: 1.5em; font-weight: bold;">0</span> 天 🫧
+      </h3>
+    </div>
+    
+    <!-- 左側文字：相遇故事 -->
+    <div class="col-sm-6">
+      <h2>Some Date</h2>
+      <h4>第一次相遇(2025-06-15)</h4>
+      <p>在陳苡靖家第一次真正見面</p>
+    </div>
+    
+    <!-- 右側文字：交往點滴 -->
+    <div class="col-sm-6">
+      <h4>交往第一天 (2025-07-13)</h4>
+      <p>泡泡來找我的第三天凌晨...</p>
+      <h4>想曖昧!!! (2025-06-25)</h4>
+      <p>泡泡在這天語出驚人</p>
+    </div>
+  </div>
+</div>
+</section>
+  
+<!-- ==========================================
+     【區塊 S2】Our Memories (照片卡片牆)
+     ========================================== -->
+<section id="s2">
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-sm-12">
+      <h1>Our Memories</h1>
+      <hr/>
+    </div>
+      
+      <!-- 卡片 1 -->
+      <div class="col-sm-3">
+        <div class="card">
+          <!-- ★ 這裡放圖片 (底片卡片) ★ -->
+          <img class="card-img-top pop-img" src="https://github.com/DJadeee/to-kiko/blob/main/3-Us.JPG?raw=true" alt="Card image cap" style="cursor: pointer;">
+          <div class="card-body">
+            <h4 class="card-title">2025/9/21</h4>
+            <p class="card-text">小硬厝</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 卡片 2 -->
+      <div class="col-sm-3">
+        <div class="card">
+          <!-- ★ 這裡放圖片 (底片卡片) ★ -->
+          <img class="card-img-top pop-img" src="https://github.com/DJadeee/to-kiko/blob/main/%E5%BD%A9%E8%99%B9%E7%9C%B7%E6%9D%91.jpg?raw=true" alt="Card image cap" style="cursor: pointer;">
+          <div class="card-body">
+            <h4 class="card-title">2026/3/14 </h4>
+            <p class="card-text">彩虹眷村</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 卡片 3 -->
+      <div class="col-sm-3">
+        <div class="card">
+          <!-- ★ 這裡放圖片 (底片卡片) ★ -->
+          <img class="card-img-top pop-img" src="https://github.com/DJadeee/to-kiko/blob/main/Rings.JPG?raw=true" alt="Card image cap" style="cursor: pointer;">
+          <div class="card-body">
+            <h4 class="card-title">2025/08/20</h4>
+            <p class="card-text">我們去做戒指!</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 卡片 4 -->
+      <div class="col-sm-3">
+        <div class="card">
+          <!-- ★ 這裡放圖片 (底片卡片) ★ -->
+          <img class="card-img-top pop-img" src="https://github.com/DJadeee/to-kiko/blob/main/Us-%E7%81%AB%E9%9B%9E%E8%82%89%E9%A3%AF.JPG?raw=true" alt="Card image cap" style="cursor: pointer;">
+          <div class="card-body">
+            <h4 class="card-title">2025/08/21</h4>
+            <p class="card-text">正統火雞肉飯</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 卡片 5 (mt-4 表示上方增加間距) -->
+      <div class="col-sm-3 mt-4">
+        <div class="card">
+          <!-- ★ 這裡放圖片 (底片卡片) ★ -->
+          <img class="card-img-top pop-img" src="https://github.com/DJadeee/to-kiko/blob/main/Us-Plan%20B%20%E6%8B%8D%E8%B2%BC.JPG?raw=true" alt="Card image cap" style="cursor: pointer;">
+          <div class="card-body">
+            <h4 class="card-title">2026/3/14</h4>
+            <p class="card-text">Plan.B 拍貼</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 卡片 6 -->
+      <div class="col-sm-3 mt-4">
+        <div class="card">
+          <!-- ★ 這裡放圖片 (底片卡片) ★ -->
+          <img class="card-img-top pop-img" src="https://github.com/DJadeee/to-kiko/blob/main/%E6%A1%8C%E5%B8%83.jpg?raw=true" alt="Card image cap" style="cursor: pointer;">
+          <div class="card-body">
+            <h4 class="card-title">2025/08/30</h4>
+            <p class="card-text">七夕!!!</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 卡片 7 -->
+      <div class="col-sm-3 mt-4">
+        <div class="card">
+          <!-- ★ 這裡放圖片 (底片卡片) ★ -->
+          <img class="card-img-top pop-img" src="https://github.com/DJadeee/to-kiko/blob/main/Us-Drain%20cover.jpg?raw=true" alt="Card image cap" style="cursor: pointer;">
+          <div class="card-body">
+            <h4 class="card-title">2026/01/13</h4>
+            <p class="card-text">半年紀念!!</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 卡片 8 -->
+      <div class="col-sm-3 mt-4">
+        <div class="card">
+          <!-- ★ 這裡放圖片 (底片卡片) ★ -->
+          <img class="card-img-top pop-img" src="https://github.com/DJadeee/to-kiko/blob/main/us-park.JPG?raw=true" alt="Card image cap" style="cursor: pointer;">
+          <div class="card-body">
+            <h4 class="card-title">2025/08/21</h4>
+            <p class="card-text">森林之歌</p>
+          </div>
+        </div>
+      </div>
+     
+     <!-- 卡片 9 -->
+      <div class="col-sm-3 mt-4">
+        <div class="card">
+          <!-- ★ 這裡放圖片 (底片卡片) ★ -->
+          <img class="card-img-top pop-img" src="https://github.com/DJadeee/to-kiko/blob/main/Us-Kagawa%20Airport.JPG?raw=true" alt="Card image cap" style="cursor: pointer;">
+          <div class="card-body">
+            <h4 class="card-title">2026/01/18</h4>
+            <p class="card-text">高松機場</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+   </div>
+</section>
+  
+<!-- ==========================================
+     【區塊 S3】未來計畫
+     ========================================== -->
+<section id="s3">
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>未來計畫</h1>
+      <hr/>
+    </div>
+    <div class="col-sm-6">
+     <!-- 將這裡的 href 改成 # 防止 CodePen 報錯 -->
+     <a href="#" target="_blank" style="text-decoration: none; color: inherit;">
+      <h3>下次旅行預定 <span class="badge badge-secondary">New</span></h3>
+      <!-- ★ 這裡放圖片 (未來計畫預留) ★，原本是 src="" 會報錯，我先改成 src="#" -->
+      <img src="https://photo.settour.com.tw/900x600/https://www.settour.com.tw/ss_img/GDP/0000/0028/18/GDP0000002818_m.jpg" class="img-fluid" alt="Plan">
+       <img src="https://static.gltjp.com/glt/data/article/21000/20187/20260105_145725_a4d00011_w1920.webp" class="img-fluid" alt="Plan">
+     </a>
+    </div>
+  </div>
+</div>
+</section>
+  
+<!-- ==========================================
+【區塊 S4】留言板
+========================================== -->
+<section id="s4">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>留言板</h1>
+                <hr/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+【隱藏機關】點擊照片放大的彈出視窗 (Modal)
+========================================== -->
+<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content" style="background-color: rgba(0,0,0,0.8); border: none;">
+            <div class="modal-body p-0 text-center">
+                <img src="" class="img-fluid w-100" id="modalImage" style="border-radius: 4px; max-height: 90vh; object-fit: contain;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 回到頂端按鈕的結構 -->
+<button type="button" id="BackTop" class="toTop-arrow"></button>
+
+<!-- 黑膠唱片音樂盒 -->
+<div class="music-player-container" id="musicPlayer">
+    <div class="vinyl-record" id="vinylRecord" onclick="toggleMusic()">
+        <div class="vinyl-center"></div>
+    </div>
+    
+    <button class="next-song-btn" onclick="nextSong()" title="切換下一首歌">⏭️</button>
+    
+    <audio id="bgMusic" preload="auto">
+        <source id="musicSource" src="https://github.com/DJadeee/to-kiko/raw/refs/heads/main/because-of-you.mp3" type="audio/mp3">
+        您的瀏覽器不支援播放此音訊。
+    </audio>
+</div>
+
+<!-- ==========================================
+【程式邏輯】動態效果與計算器腳本
+========================================== -->
+<script>
+$(function(){
+    // 1. 回到頂端按鈕邏輯
+    $('#BackTop').click(function(){
+        $('html,body').animate({scrollTop:0}, 333);
+    });
+    
+    // 判斷滑動距離顯示/隱藏按鈕
+    $(window).scroll(function() {
+        if ( $(this).scrollTop() > 300 ){
+            $('#BackTop').fadeIn(222);
+        } else {
+            $('#BackTop').stop().fadeOut(222);
+        }
+    }).scroll();
+
+    // 2. 照片點擊放大連動邏輯
+    $('.pop-img').on('click', function() {
+        var imageSrc = $(this).attr('src'); 
+        $('#modalImage').attr('src', imageSrc); 
+        $('#imageModal').modal('show'); 
+    });
+
+    // 3. 在一起天數計算器邏輯 (優化為無條件捨去 Math.floor)
+    (function calculateDays() {
+        const startDateStr = '2025-07-13';
+        const startDate = new Date(startDateStr); 
+        const today = new Date(); 
+        const diffTime = Math.abs(today - startDate); 
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        
+        if (today < startDate) {
+            $('#days-counter').text('0');
+        } else {
+            $('#days-counter').text(diffDays);
+        }
+    })();
+
+    // 4. 音樂強制循環監聽器 (移入安全區域，確保網頁載入後才執行，徹底修復按鈕癱瘓問題)
+    const audio = document.getElementById('bgMusic');
+    if (audio) {
+        audio.addEventListener('ended', function() {
+            audio.currentTime = 0; 
+            audio.play().catch(err => console.log("循環播放被阻擋:", err));
+        });
+    }
+});
+
+// 5. 黑膠唱片點擊主控函式
+function toggleMusic() {
+    const audio = document.getElementById('bgMusic');
+    const record = document.getElementById('vinylRecord');
+    
+    if (audio.paused) {
+        audio.play().then(() => {
+            record.classList.add('playing');
+        }).catch((error) => {
+            console.log("播放被瀏覽器阻擋:", error);
+        });
+    } else {
+        audio.pause();
+        record.classList.remove('playing');
+    }
+}
+</script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
