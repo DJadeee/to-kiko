@@ -15,7 +15,7 @@ html, body {
 .container { padding-top: 80px; }
 
 /* 調整輪播圖外部容器：把整組照片往下推，遠離導覽列 */
-.ncyu { 
+.hero-section { 
   padding-top: 100px; 
   padding-bottom: 20px;
   padding-left: 15px; 
